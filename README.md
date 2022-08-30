@@ -7,7 +7,7 @@
 
 ## Getting Started 
 If you wish to run the project locally, please do the following: Clone the repository to your local machine.
-git clone 
+git clone https://github.com/MoRaad97/oop-school-library.git
 
 ## Authors
 
@@ -32,7 +32,3 @@ Give a ⭐️ if you like this project!
 - Hat tip to anyone whose code was used
 - Inspiration
 - etc
-
-## 📝 License
-
-This project is [MIT](./MIT.md) licensed.
