@@ -1,7 +1,8 @@
-require './person.rb'
+require './person'
 
 class Student < Person
-  attr_reader :classroom
+  attr_accessor :classroom
+  attr_reader :age, :name, :parent_permission
 
   def initialize(classroom)
     super(age, name, parent_permission)

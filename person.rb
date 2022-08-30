@@ -17,6 +17,6 @@ class Person
   public
 
   def can_use_services?
-    is_of_age?
+    of_age?
   end
 end
