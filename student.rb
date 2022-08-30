@@ -1,9 +1,10 @@
-require 'person'
+require './person.rb'
 
 class Student < Person
   attr_reader :classroom
 
-  def initialize(classroom, _age, _name, _parent_permission)
+  def initialize(classroom)
+    super(age, name, parent_permission)
     @classroom = classroom
   end
 
