@@ -1,7 +1,8 @@
 require './nameable.rb'
+require './rental.rb'
 class Person < Nameable
-  attr_reader :id, :rentals
-  attr_accessor :name, :age
+  attr_reader :id 
+  attr_accessor :name, :age, :rentals
   def initialize(age, name = 'Unknown', parent_permission: true)
     @id = Random.rand(1..1000)
     @name = name
@@ -18,9 +19,8 @@ class Person < Nameable
     @name
   end
 
-  def add_rental(rental)
-    @rentals << rental
-    rental.book = self
+  def add_rental(date, book)
+     Rental.new(date, self, book)
   end
 
   private
