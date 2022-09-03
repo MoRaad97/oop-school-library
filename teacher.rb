@@ -1,10 +1,9 @@
 require './person.rb'
 
 class Teacher < Person
-  attr_accessor :specialization
-  attr_reader :age, :name, :parent_permission
+  attr_accessor :specialization, :parent_permission, :age, :name
   def initialize(specialization, age, name, parent_permission: true)
-    super(age, name, parent_permission)
+    super(age, name, parent_permission: parent_permission)
     @specialization = specialization
   end
 
