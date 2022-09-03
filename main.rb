@@ -1,7 +1,6 @@
 # main file
 require './app.rb'
 
-
 def main 
 puts " "
 puts "welcome to School Library App!"
@@ -40,7 +39,5 @@ break
     service_num = gets.chomp
   end
 end
-# add_rental
-
 
 main()
