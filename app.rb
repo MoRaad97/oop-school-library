@@ -84,6 +84,7 @@ def book_list
   end
 end
 
+
 def people_list
   puts 'Select a person from the following list by number(not id)'
   k = 0
@@ -94,6 +95,9 @@ def people_list
 end
 
 def add_rental
+$people = []
+$people.concat($students) 
+$people.concat($teachers)
   puts ' '
   book_list
   book_number = gets.chomp.to_i
@@ -111,18 +115,9 @@ end
 def rental_by_person_id
   print 'ID of person: '
   id = gets.chomp.to_i
-  $people.each do |person|
-    puts "this is working #{person.id}"
-    if person.id.to_i == id 
-      puts $rentals.each do |rental| 
-        puts "#{rental.person.id.to_i}"
-        if rental.person.id.to_i == id
+      $rentals.each do |rental| 
+        if rental.person.id == id
         puts " Date: #{rental.date}, title: #{rental.book.title}, Author: # #{rental.book.author}" 
-
       end
     end
-    else 
-    puts "No ID Found With Number : #{id}"
-    end
-  end
 end
